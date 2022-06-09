@@ -1,7 +1,6 @@
 package io.hitesh.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -9,9 +8,11 @@ import javax.persistence.*;
  * JPA entity : Employee
  */
 @Entity
-@Table(name = "employees")
-@Getter
-@Setter
+@Table(name = "employee")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Employee {
 
 	@Id
@@ -24,12 +25,4 @@ public class Employee {
 	@Column(name = "email")
 	private String email;
 
-	public Employee() {
-	}
-
-	public Employee(String firstName, String lastName, String email) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-	}
 }

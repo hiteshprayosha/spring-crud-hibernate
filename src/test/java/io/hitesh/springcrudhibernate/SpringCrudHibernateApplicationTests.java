@@ -1,10 +1,10 @@
-package io.hitesh.springbootpostgresqlhibernatecrudexample;
+package io.hitesh.springcrudhibernate;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringbootPostgresqlHibernateCrudExampleApplicationTests {
+class SpringCrudHibernateApplicationTests {
 
 	@Test
 	void contextLoads() {
