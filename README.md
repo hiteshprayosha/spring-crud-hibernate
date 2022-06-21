@@ -10,8 +10,20 @@
 3. spring-boot-starter-web
 4. spring-boot-starter-validation
 5. lombock
-6. springdoc-openapi-ui *Spring REST API Using OpenAPI 3.0)
+6. springdoc-openapi-ui (Spring REST API Using OpenAPI 3.0)
+7. Spring Profile
+8. JSONB Column type (search entity)
+9. Postgres Database
 
+TODO:
+
+Application Config
+External Api Service
+Composite Adapter
+Converter
+Kafka
+testcontainers
+ 
 Run the application in local env.
 
 ./mvnw spring-boot:run
@@ -47,6 +59,9 @@ docker rmi spring-crud-hibernate:latest
 
 ```bash
 ./gradlew bootRun
+
+./gradlew -Plocal bootRun
+./gradlew -Pdev bootRun
 ```
 
 H2 Database local

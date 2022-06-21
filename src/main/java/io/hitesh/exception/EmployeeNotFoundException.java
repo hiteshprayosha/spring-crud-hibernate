@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ResponseStatus(value = HttpStatus.NOT_FOUND)
 public class EmployeeNotFoundException extends Exception {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	public EmployeeNotFoundException(long employeeId) {
-		super("Employee id not found " + employeeId);
-	}
+    public EmployeeNotFoundException(long employeeId) {
+        super("Employee id not found " + employeeId);
+    }
 }

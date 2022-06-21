@@ -12,13 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/")
 public class SearchController {
 
-	@Autowired
-	private SearchService service;
+    @Autowired private SearchService service;
 
-	@PostMapping("search")
-	public void addPayload(@RequestBody String jsonPayload) throws JsonProcessingException {
-		System.out.println(jsonPayload);
-		service.saveSearch(jsonPayload);
-
-	}
+    @PostMapping("search")
+    public void addPayload(@RequestBody String jsonPayload) throws JsonProcessingException {
+        System.out.println(jsonPayload);
+        service.saveSearch(jsonPayload);
+    }
 }
