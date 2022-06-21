@@ -1,9 +1,8 @@
-
 plugins {
-	id 'org.springframework.boot' version '2.7.0'
-	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-	id 'java'
-	id "com.diffplug.spotless" version "5.0.0"
+    id 'org.springframework.boot' version '2.7.0'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id "com.diffplug.spotless" version "5.0.0"
 }
 
 group = 'io.hitesh'
@@ -13,9 +12,9 @@ sourceCompatibility = '11'
 targetCompatibility = '11'
 
 configurations {
-	compileOnly {
-		extendsFrom annotationProcessor
-	}
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
 }
 
 ext['slf4j.version'] = '1.7.20'
@@ -23,36 +22,36 @@ ext['lombokVersion'] = '1.18.20'
 ext['jsonAdapterVersion'] = '1.0.4'
 
 repositories {
-	mavenLocal()
-	mavenCentral()
+    mavenLocal()
+    mavenCentral()
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation "org.springframework.boot:spring-boot-starter-web"
-	implementation 'org.springframework.boot:spring-boot-starter-validation'
-	implementation 'org.springdoc:springdoc-openapi-ui:1.6.9'
-	implementation "com.vladmihalcea:hibernate-types-52:2.0.0"
-	implementation "com.github.michaelruocco:json-adapter:${jsonAdapterVersion}"
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springdoc:springdoc-openapi-ui:1.6.9'
+    implementation "com.vladmihalcea:hibernate-types-52:2.0.0"
+    implementation "com.github.michaelruocco:json-adapter:${jsonAdapterVersion}"
 
-	runtimeOnly 'com.h2database:h2'
-//	runtimeOnly 'org.postgresql:postgresql'
+//	runtimeOnly 'com.h2database:h2'
+    runtimeOnly 'org.postgresql:postgresql'
 
-	compileOnly "org.projectlombok:lombok:${lombokVersion}"
-	annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 spotless {
-	java {
-		googleJavaFormat('1.15.0').aosp()
-	}
+    java {
+        googleJavaFormat('1.15.0').aosp()
+    }
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }
 
 //bootRun {

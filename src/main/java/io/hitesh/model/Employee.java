@@ -1,11 +1,15 @@
 package io.hitesh.model;
 
-import javax.persistence.*;
-import lombok.*;
-import org.hibernate.annotations.Type;
-import org.hibernate.annotations.TypeDef;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-/** JPA entity : Employee */
+import javax.persistence.*;
+
+/**
+ * JPA entity : Employee
+ */
 @Entity
 @Table(name = "employee")
 @Data
@@ -14,17 +18,17 @@ import org.hibernate.annotations.TypeDef;
 @Builder
 public class Employee {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
 
-    @Column(name = "first_name")
-    private String firstName;
+	@Column(name = "first_name")
+	private String firstName;
 
-    @Column(name = "last_name")
-    private String lastName;
+	@Column(name = "last_name")
+	private String lastName;
 
-    @Column(name = "email")
-    private String email;
+	@Column(name = "email")
+	private String email;
 
 }

@@ -13,9 +13,9 @@ import java.util.Map;
 @Service
 public class SearchService {
 
-	@Autowired private SearchRepository repository;
-
 	ObjectMapper mapper = new ObjectMapper();
+	@Autowired
+	private SearchRepository repository;
 
 	public Search saveSearch(String searchData) throws JsonProcessingException {
 

@@ -1,8 +1,6 @@
 package io.hitesh.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import io.hitesh.model.Search;
-import io.hitesh.service.EmployeeService;
 import io.hitesh.service.SearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
