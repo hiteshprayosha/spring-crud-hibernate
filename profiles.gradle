@@ -1,0 +1,17 @@
+def devProfiles = 'local'
+def propertyDrivenProfiles;
+
+if (project.hasProperty('local')) {
+    // Used for local environment
+    propertyDrivenProfiles = prodProfiles
+    apply from: rootProject.file('gradle/profile_local.gradle');
+
+} else if (project.hasProperty('dev')) {
+    // Used for dev environment
+    propertyDrivenProfiles = prodProfiles
+    apply from: rootProject.file('gradle/profile_dev.gradle');
+
+}
+
+
+println 'Using profile: "' + propertyDrivenProfiles + '" for ' + project.getName()
